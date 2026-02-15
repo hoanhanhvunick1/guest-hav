@@ -336,9 +336,9 @@ def create_accounts():
     # Limit for Vercel
     if account_count > 5000:
         return jsonify({"error": "Maximum 5000 accounts per request"}), 400
-    if threads > 5:
+    if threads > 1000:
         return jsonify({"warning": "Threads limited to 5", "threads_used": 5})
-        threads = 5
+        threads = 1000
     
     # Reset counter
     SUCCESS_COUNTER = 0
@@ -444,4 +444,5 @@ def test():
 
 if __name__ == "__main__":
     app.run(debug=True, host='0.0.0.0', port=3000)
+
 
