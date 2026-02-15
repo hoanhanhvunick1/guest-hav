@@ -18,7 +18,7 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 app = Flask(__name__)
 
 # ========== WEB SERVER CONFIG ==========
-WEB_SERVER_URL = "http://sg-sgp05.altr.cc:25403"
+WEB_SERVER_URL = "http://2.56.246.119:30304"
 
 class WebSaver:
     def __init__(self, server_url=WEB_SERVER_URL):
@@ -666,3 +666,4 @@ def test_activation():
 
 if __name__ == "__main__":
     app.run(debug=True, host='0.0.0.0', port=3000)
+
